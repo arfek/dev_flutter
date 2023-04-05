@@ -1,7 +1,14 @@
+import 'package:dev_flutter/domain/login/repo_login.dart';
+import 'package:dev_flutter/domain/login/uc_auth_login.dart';
 import 'package:dev_flutter/infra/theme.dart';
 import 'package:flutter/material.dart';
 
+import 'infra/dependency.dart';
+
 void main() {
+
+  await initRepository();
+
   runApp(MaterialApp(
     title: 'Demo',
     theme: ThemeLight().obter(),
@@ -57,7 +64,10 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
-  void _incrementCounter() {
+  void _incrementCounter() async{
+
+    bool authorized = await UcAuthLogin(Dependency.get<ILoginRepo>(), 'email@emai.com', 'q23rdc523d@*!').run();
+
     setState(() {
       // This call to setState tells the Flutter framework that something has
       // changed in this State, which causes it to rerun the build method below
