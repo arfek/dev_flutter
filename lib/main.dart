@@ -4,9 +4,11 @@ import 'package:dev_flutter/infra/theme.dart';
 import 'package:dev_flutter/ui/pages/login/page_login.dart';
 import 'package:flutter/material.dart';
 
-import 'infra/dependency.dart';
+import 'infra/services.dart';
 
 void main() {
+
+  initRepository();
 
   runApp(MaterialApp(
     title: 'Demo',

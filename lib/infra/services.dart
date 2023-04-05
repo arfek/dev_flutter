@@ -1,3 +1,4 @@
+import 'package:dev_flutter/domain/cliente/repo_cliente.dart';
 import 'package:dev_flutter/domain/login/repo_login.dart';
 import 'package:dev_flutter/infra/dependency.dart';
 
@@ -21,8 +22,10 @@ Future initRepository() async {
 
 void registerDependencyApi(){
   Dependency.addOrReplace<ILoginRepo>(LoginRepoAPI());
+  Dependency.addOrReplace<IClienteRepo>(ClienteRepoAPI());
 }
 
 void registerDependencyInMemory(){
   Dependency.addOrReplace<ILoginRepo>(LoginRepoInMemory());
+  Dependency.addOrReplace<IClienteRepo>(ClienteRepoInMemory());
 }

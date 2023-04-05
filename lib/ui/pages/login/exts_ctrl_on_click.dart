@@ -19,6 +19,7 @@ extension OnClick on LoginController{
 
       if(authorized){
 
+        print('logou');
 
 
       }else{

@@ -1,0 +1,19 @@
+[
+  {
+  "nomeRazao": "Comércio de Carnes",
+  "nomeFantasia": "Boi & Brasa",
+  "cpfCnpj": "02.009.0009/0001-21"
+  },
+
+  {
+    "nomeRazao": "Comércio de Frutas",
+    "nomeFantasia": "Basso Frutas",
+    "cpfCnpj": "03.009.0009/0001-22"
+  },
+
+  {
+    "nomeRazao": "Comércio de Bebidas",
+    "nomeFantasia": "Cerv Já!",
+    "cpfCnpj": "04.009.0009/0001-23"
+  }
+]

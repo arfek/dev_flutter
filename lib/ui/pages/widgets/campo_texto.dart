@@ -22,6 +22,7 @@ class CampoTexto extends MyCustomEditText {
     int? maxLines,
     int? minLines,
     FocusNode? focusNode,
+    bool? obscureText = false,
     TextInputAction? textInputAction,
     bool? obrigatorio,
     bool? disabled = false,
@@ -50,6 +51,7 @@ class CampoTexto extends MyCustomEditText {
           labelBorda: labelBorda,
           alinharNaDireita: alinharNaDireita,
           styleTexto: styleTexto,
+          obscureText: obscureText ?? false
         );
 
   @override

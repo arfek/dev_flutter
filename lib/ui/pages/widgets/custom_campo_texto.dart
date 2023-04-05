@@ -17,6 +17,7 @@ class MyCustomEditText<T> extends StatelessWidget {
   TextInputType? keyboard;
   bool? obrigatorio;
   bool? enabled;
+  bool? obscureText;
   FocusNode? focusNode;
   TextInputAction? textInputAction;
   bool exibirWidgetTitulo;
@@ -45,7 +46,8 @@ class MyCustomEditText<T> extends StatelessWidget {
       this.exibirWidgetTitulo = true,
       this.alinharNaDireita,
       this.styleTitulo,
-      this.styleTexto})
+      this.styleTexto,
+      this.obscureText = false})
       : super(key: key);
 
   late BuildContext context;
@@ -117,6 +119,7 @@ class MyCustomEditText<T> extends StatelessWidget {
                 : minLines,
         //Isso faz o campo ficar maior
         maxLines: maxLines,
+        obscureText: obscureText ?? false,
         maxLength: maximoCaracteres,
         keyboardType: keyboard,
         textInputAction: (maxLines != null && maxLines! > 1)
@@ -130,7 +133,7 @@ class MyCustomEditText<T> extends StatelessWidget {
         },
         enabled: enabled ?? true,
         decoration: InputDecoration(
-          fillColor: enabled ?? true ? Colors.white : Colors.grey,
+          fillColor: enabled ?? true ? Colors.black : Colors.grey,
           label: labelBorda != null ? Text(labelBorda!) : null,
           floatingLabelStyle: const TextStyle(fontWeight: FontWeight.normal),
           hintText: hint,

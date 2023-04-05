@@ -44,10 +44,10 @@ class _LoginPageState extends State<LoginPage> {
                 ),
 
                 Text('E-mail', style: TextStyle(color: Colors.black)),
-                CampoTexto(controller: controller.edtEmail),
+                CampoTexto(controller: controller.edtEmail, styleTexto: const TextStyle(color: Colors.black)),
                 const SizedBox(height: 40,),
                 Text('Senha', style: TextStyle(color: Colors.black)),
-                CampoTexto(controller: controller.edtPassword,),
+                CampoTexto(controller: controller.edtPassword, obscureText: true, maxLines: 1 ,  styleTexto: const TextStyle(color: Colors.black) ),
                 const SizedBox(height: 40,),
                 Botao(titulo: 'Autenticar', onClick: () async{
                   await controller.onClickAuth();
