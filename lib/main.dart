@@ -1,7 +1,14 @@
+import 'package:dev_flutter/infra/theme.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MaterialApp(
+    title: 'Demo',
+    theme: ThemeLight().obter(),
+    darkTheme: ThemeDark().obter(),
+    themeMode: ThemeMode.light,
+    home: const MyHomePage(title: "Demo")
+  ));
 }
 
 class MyApp extends StatelessWidget {
