@@ -27,7 +27,7 @@ class LoginRepoInMemory implements ILoginRepo{
   Future<bool> auth(String email, String password) async{
     String strAuth = await rootBundle.loadString('assets/in_memory/auth.json');
 
-    var jsonAuth = jsonDecode(strAuth);
+    Map<String, dynamic> jsonAuth = jsonDecode(strAuth);
 
     return jsonAuth['Authorized'];
   }
